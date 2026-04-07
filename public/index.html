@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Music</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body> 
+
+<header>
+  <input type="text" id="busca" placeholder="Buscar música ou artista">
+  <button onclick="buscar()">Buscar</button>
+</header>
+
+<div id="lista"></div>
+
+<form id="formArtista">
+  
+</form>
+
+<form id="formUpload">
+  
+</form>
+
+<div class="player">
+  <img id="capaAtual" width="50">
+
+  <div>
+    <div id="infoMusica">Nenhuma música</div>
+    <small id="tempo">00:00 / 00:00</small>
+  </div>
+
+  <button id="btnPrev">⏮️</button>
+  <button id="btnPlay">▶️</button>
+  <button id="btnNext">⏭️</button>
+
+  <input type="range" id="progress" value="0">
+
+  <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+
+  <audio id="player"></audio>
+</div>
+
+<div class="fab" onclick="toggleMenu()">+</div>
+
+<div id="menuFab" class="fab-menu hidden">
+  <button onclick="abrirForm('musica')">🎵 Música</button>
+  <button onclick="abrirForm('artista')">👤 Artista</button>
+</div>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-content" id="modalContent"></div>
+</div>
+
+<script src="/public/script.js"></script>
+
+</body>
+</html>
